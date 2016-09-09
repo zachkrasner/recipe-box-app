@@ -26,7 +26,7 @@ class RecipesController < ApplicationController
   end
 
   def update
-    if @recipe.update(params.require(:recipe).permit(:title, :description))
+    if @recipe.update(recipe_params)
       redirect_to @recipe, notice: "Updated!"
     else
       render 'edit'
@@ -46,7 +46,7 @@ class RecipesController < ApplicationController
   end
 
   def recipe_params
-    params.require(:recipe).permit(:title, :description)
+    params.require(:recipe).permit(:title, :description, :image)
   end
 
 end

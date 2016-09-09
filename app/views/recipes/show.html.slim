@@ -6,9 +6,12 @@ h1= @recipe.title
 .row
   .col-md-8
     p: em = "Posted " + time_ago_in_words(@recipe.created_at) + " ago"
+    p= image_tag @recipe.image.url(:medium), class: "img-responsive"
+
     p= simple_format(@recipe.description)
 
   .col-md-4
+    p &nbsp;
     .panel.panel-default
       .panel-heading Recipe
       .panel-body

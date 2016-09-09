@@ -23,6 +23,8 @@ gem 'devise'
 gem 'high_voltage'
 gem 'simple_form'
 gem 'slim'
+gem "paperclip", "~> 5.0.0"
+
 
 group :development do
   gem 'better_errors'
