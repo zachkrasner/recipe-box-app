@@ -3,8 +3,8 @@ br
   - if @recipe.errors.any?
     #errors
       p
-        = @recipe.errors.count
-        | prevented this form from saving
+        => @recipe.errors.count
+        | things prevented this form from saving
       ul
         = @recipe.errors.full_messages.each do |msg|
           li= msg

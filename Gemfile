@@ -16,6 +16,7 @@ end
 group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
+  gem 'pry-rails'
 end
 
 gem 'bootstrap-sass'
@@ -25,8 +26,6 @@ gem 'simple_form'
 gem 'slim'
 gem "paperclip", "~> 5.0.0"
 gem "cocoon"
-
-
 
 group :development do
   gem 'better_errors'

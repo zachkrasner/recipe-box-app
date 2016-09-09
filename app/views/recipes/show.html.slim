@@ -5,7 +5,10 @@ h1= @recipe.title
 
 .row
   .col-md-8
-    p: em = "Posted " + time_ago_in_words(@recipe.created_at) + " ago"
+    p
+      em = "Posted " + time_ago_in_words(@recipe.created_at) + " ago by "
+      - unless @recipe.user_id.blank?
+        strong= link_to @recipe.user.email, user_path(@recipe.user)
     p= image_tag @recipe.image.url(:medium), class: "img-responsive"
 
     p= simple_format(@recipe.description)
