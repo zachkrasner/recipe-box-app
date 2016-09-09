@@ -1,5 +1,5 @@
 class Recipe < ActiveRecord::Base
-  validates :title, :description, presence: true, length: { minimum: 4 }
+  validates :title, presence: true
 
   has_many :ingredients
   accepts_nested_attributes_for :ingredients, reject_if: :all_blank, allow_destroy: true
