@@ -22,7 +22,7 @@ gem 'bootstrap-sass'
 gem 'devise'
 gem 'high_voltage'
 gem 'simple_form'
-gem 'slim-rails'
+gem 'slim'
 
 group :development do
   gem 'better_errors'

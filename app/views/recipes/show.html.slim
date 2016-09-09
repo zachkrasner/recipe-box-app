@@ -1,0 +1,16 @@
+br
+= link_to 'Back', recipes_path
+
+h1= @recipe.title
+
+.row
+  .col-md-8
+    p: em = "Posted " + time_ago_in_words(@recipe.created_at) + " ago"
+    p= simple_format(@recipe.description)
+
+  .col-md-4
+    .panel.panel-default
+      .panel-heading Recipe
+      .panel-body
+        => link_to 'Edit', edit_recipe_path(@recipe), class: "btn btn-default"
+        => link_to 'Remove', recipe_path(@recipe), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger"

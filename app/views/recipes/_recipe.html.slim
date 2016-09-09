@@ -1,0 +1,6 @@
+.col-md-4.portfolio-item
+  = link_to recipe_path(recipe)
+    img.img-responsive alt="" src="http://placehold.it/700x400" /
+  h3
+    = link_to recipe.title, recipe_path(recipe)
+  p= truncate recipe.description, length: 100

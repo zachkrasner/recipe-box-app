@@ -1,0 +1,8 @@
+- content_for :title do
+  | Editing Recipe
+
+h1 Editing "#{@recipe.title}"
+
+== render 'form'
+
+= link_to 'Back', root_path
