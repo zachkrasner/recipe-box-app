@@ -24,6 +24,8 @@ gem 'high_voltage'
 gem 'simple_form'
 gem 'slim'
 gem "paperclip", "~> 5.0.0"
+gem "cocoon"
+
 
 
 group :development do
