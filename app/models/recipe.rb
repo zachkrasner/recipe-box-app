@@ -1,6 +1,11 @@
 class Recipe < ActiveRecord::Base
-  validates :title, presence: true, length: { minimum: 4 }
-  validates :description, presence: true
+  validates :title, :description, presence: true, length: { minimum: 4 }
+
+  has_many :ingredients
+  accepts_nested_attributes_for :ingredients, reject_if: :all_blank, allow_destroy: true
+
+  has_many :directions
+  accepts_nested_attributes_for :directions, reject_if: :all_blank, allow_destroy: true
 
   # images
   has_attached_file :image, styles: { medium: "700x400#" }, default_url: ":style/700x400.png"

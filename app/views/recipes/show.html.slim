@@ -13,7 +13,24 @@ h1= @recipe.title
   .col-md-4
     p &nbsp;
     .panel.panel-default
-      .panel-heading Recipe
+      .panel-heading: strong Ingredients
+      .panel-body
+        #ingredients
+          ul
+            - @recipe.ingredients.each do |i|
+              li= i.name
+
+    .panel.panel-default
+      .panel-heading: strong Directions
+      .panel-body
+        #ingredients
+          ul
+            - @recipe.directions.each do |d|
+              li= d.steps
+
+
+    .panel.panel-info
+      .panel-heading Manage
       .panel-body
         => link_to 'Edit', edit_recipe_path(@recipe), class: "btn btn-default"
         => link_to 'Remove', recipe_path(@recipe), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger"

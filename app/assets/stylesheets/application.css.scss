@@ -17,14 +17,21 @@
 .margin-top {
   margin-top: 10px;
 }
+.margin-top-xs {
+  margin-top: 3px;
+}
+
+.navbar-brand {
+  color: #222 !important;
+  font-size: 16px;
+  &:hover {
+    color: #4a9cff !important;
+  }
+  &:active {
+    color: rgb(237, 68, 108) !important;
+  }
+}
 
 p {
   line-height: 1.8em;
-}
-
-img.recipe {
-  transition: all .2s ease-out;
-  &:hover {
-      transform: scale(1.035);
-  }
 }
